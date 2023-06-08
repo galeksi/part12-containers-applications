@@ -1,0 +1,18 @@
+Script started on 2023-06-07 15:20:58+03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="102" LINES="51"]
+ * Starting PostgreSQL 12 database server       [102G [96G[ OK ]
+[1m[7m%[27m[1m[0m                                                                                                      ]2;alrendel@FINNB030:~/code/part12-containers-applications]1;..-applications]7;file://FINNB030/home/alrendel/code/part12-containers-applications[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32mscript[39m[32md[32mo[32mc[32mk[32me[32mr[39m run -it ubuntu bash[26D[32me[32mx[32mi[32mt[39m[39m [39m                     [22D[32me[32mc[32mh[32mo[39m [33m'hello again'[39m[18D[32ms[32mc[32mr[32mi[32mp[32mt[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [12D[32me[32mc[32mh[32mo[39m[39m [33m'[33mhello again'[39m[18D[32me[32mx[32mi[32mt[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [14D[32md[32mo[32mc[32mk[32mer[39m run -it ubuntu bash[?1l>[?2004l
+]2;docker run -it ubuntu bash]1;docker[?2004h]0;root@d43ba18994b3: /root@d43ba18994b3:/# ls
+[?2004l[0m[01;36mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;36mlib32[0m  [01;36mlibx32[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34mrun[0m   [01;34msrv[0m  [30;42mtmp[0m  [01;34mvar[0m
+[01;34mboot[0m  [01;34metc[0m  [01;36mlib[0m   [01;36mlib64[0m  [01;34mmedia[0m   [01;34mopt[0m  [01;34mroot[0m  [01;36msbin[0m  [01;34msys[0m  [01;34musr[0m
+[?2004h]0;root@d43ba18994b3: /root@d43ba18994b3:/# cd usr/src
+[?2004l[?2004h]0;root@d43ba18994b3: /usr/srcroot@d43ba18994b3:/usr/src# ls
+[?2004l[?2004h]0;root@d43ba18994b3: /usr/srcroot@d43ba18994b3:/usr/src# mkdir app
+[?2004l[?2004h]0;root@d43ba18994b3: /usr/srcroot@d43ba18994b3:/usr/src# cd app
+[?2004l[?2004h]0;root@d43ba18994b3: /usr/src/approot@d43ba18994b3:/usr/src/app# tuch   ouch index.js
+[?2004l[?2004h]0;root@d43ba18994b3: /usr/src/approot@d43ba18994b3:/usr/src/app# ls
+[?2004lindex.js
+[?2004h]0;root@d43ba18994b3: /usr/src/approot@d43ba18994b3:/usr/src/app# exit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                                                      ]2;alrendel@FINNB030:~/code/part12-containers-applications]1;..-applications]7;file://FINNB030/home/alrendel/code/part12-containers-applications[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[1m[31me[0m[39m[0m[32me[32mx[39m[1m[31me[1m[31mx[1m[31mi[0m[39m[0m[32me[0m[32mx[0m[32mi[32mt[39m[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2023-06-07 15:22:12+03:00 [COMMAND_EXIT_CODE="0"]
