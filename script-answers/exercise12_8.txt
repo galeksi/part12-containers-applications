@@ -1,0 +1,76 @@
+Script started on 2023-06-13 14:01:14+03:00 [TERM="xterm-256color" TTY="/dev/pts/10" COLUMNS="102" LINES="51"]
+ * Starting PostgreSQL 12 database server       [102G [96G[ OK ]
+[1m[7m%[27m[1m[0m                                                                                                      ]2;alrendel@FINNB030:~/code/part12-containers-applications]1;..-applications]7;file://FINNB030/home/alrendel/code/part12-containers-applications[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32md[39m[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m container ls[?1l>[?2004l
+]2;docker container ls]1;dockerCONTAINER ID   IMAGE     COMMAND                  CREATED       STATUS          PORTS                     NAMES
+1c2d13f00bae   mongo     "docker-entrypoint.s…"   2 hours ago   Up 26 seconds   0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+[1m[7m%[27m[1m[0m                                                                                                      ]2;alrendel@FINNB030:~/code/part12-containers-applications]1;..-applications]7;file://FINNB030/home/alrendel/code/part12-containers-applications[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[32md[39m[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m exec -it mongo bash bash  bash  bash  bash  bash t basho bashd basho bash- bashb basha bashc bashk bashe bashn bashd bash- bashm basho bashn bashg basho bash- bash1 bash[1C[1C[1C[1C[1C[?1l>[?2004l
+]2;docker exec -it todo-backend-mongo-1 bash]1;docker[?2004hroot@1c2d13f00bae:/# mongosh -u root -p example
+[?2004l]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	64884cf3dbc34bf23f0a4ef5
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.9.1[0m
+Using MongoDB:		6.0.6
+[1m[33mUsing Mongosh[0m:		1.9.1
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the [1mdisableTelemetry()[0m command.
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2023-06-13T11:00:59.373+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2023-06-13T11:01:00.037+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'
+   2023-06-13T11:01:00.037+00:00: vm.max_map_count is too low
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m         60.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   56.00 KiB
+[1G[0Jtest> [7Guse the_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.di[1G[0Jthe_database> db.todos.d[25G[1G[0Jthe_database> db.todos.[24Gfinf=d [1G[0Jthe_database> db.todos.finf=d[30G[1G[0Jthe_database> db.todos.finf=[29G[1G[0Jthe_database> db.todos.finf[28G[1G[0Jthe_database> db.todos.fin[27Gd({})
+[
+  {
+    _id: ObjectId("648835c03ac28016b2a5c108"),
+    text: [32m'Write even more code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId("648835c03ac28016b2a5c109"),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.todos.insertOne({textL[1G[0Jthe_database> db.todos.insertOne({text[39G[33mtext[39m: [32m"[39m[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [41G;[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [41G;[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [41G[32m'[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32mb[39m[32me[39m[32ml[39m[32mt[39m[32m'[39m, d[36mdo[39mdoneL[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase the number of tools in my toolbelt'[39m, done[92G;[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase the number of tools in my toolbelt'[39m, done[92G[33mdone[39m: fl[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase the number of tools in my toolbelt'[39m, [33mdone[39m: f[95Gals[33mfalse[39m{[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase the number of tools in my toolbelt'[39m, [33mdone[39m: [33mfalse[39m[99G})
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId("648850a2dbc34bf23f0a4ef6")
+}
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase the number of tools in my toolbelt'[39m, [33mdone[39m: [33mfalse[39m})[101G[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId("648835c03ac28016b2a5c108"),
+    text: [32m'Write even more code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId("648835c03ac28016b2a5c109"),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId("648850a2dbc34bf23f0a4ef6"),
+    text: [32m'Increase the number of tools in my toolbelt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gexit
+[?2004hroot@1c2d13f00bae:/# exit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                                                      ]2;alrendel@FINNB030:~/code/part12-containers-applications]1;..-applications]7;file://FINNB030/home/alrendel/code/part12-containers-applications[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[1m[31me[0m[39m[0m[32me[32mx[39m[1m[31me[1m[31mx[1m[31mi[0m[39m[0m[32me[0m[32mx[0m[32mi[32mt[39m[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2023-06-13 14:20:12+03:00 [COMMAND_EXIT_CODE="0"]
