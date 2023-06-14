@@ -15,10 +15,10 @@ router.post("/", async (req, res) => {
     text: req.body.text,
     done: false,
   });
+
   let counter = await getAsync("added_todos");
-  console.log(counter);
-  console.log(typeof counter);
   counter ? counter++ : (counter = 1);
+
   await setAsync("added_todos", counter);
   res.send(todo);
 });

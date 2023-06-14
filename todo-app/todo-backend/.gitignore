@@ -62,3 +62,7 @@ typings/
 
 # mongo volume for docker
 mongo_data
+
+# redis volume for docker
+redis_data
+
