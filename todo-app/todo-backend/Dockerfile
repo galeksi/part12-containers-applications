@@ -6,7 +6,7 @@ COPY --chown=node:node . .
 
 RUN npm ci --only=production
 
-ENV DEBUG=playground:*
+ENV DEBUG=todo-express-backend:*
 
 USER node
 CMD npm start

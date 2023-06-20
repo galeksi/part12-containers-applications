@@ -4,8 +4,6 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-ENV REACT_APP_BACKEND_URL=http://localhost:3000/
-
 RUN npm ci
 
 RUN CI=true npm test
@@ -17,7 +15,7 @@ WORKDIR /usr/src/app
 
 COPY --from=test-stage /usr/src/app .
 
-ENV REACT_APP_BACKEND_URL=http://localhost:3000/
+ENV REACT_APP_BACKEND_URL=http://localhost:8080/api
 
 RUN npm ci
 
