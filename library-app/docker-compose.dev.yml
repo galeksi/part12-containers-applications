@@ -1,0 +1,31 @@
+services:
+  server:
+    image: library-backend-dev
+    build:
+      context: .
+      dockerfile: backend/dev.Dockerfile
+    volumes:
+      - ./backend/:/usr/src/app
+    ports:
+      - 4000:4000
+    container_name: library_backend_dev
+  app:
+    image: library-frontend-dev
+    build:
+      context: .
+      dockerfile: frontend/dev.Dockerfile
+    volumes:
+      - ./frontend/:/usr/src/app
+    ports:
+      - 3000:3000
+    container_name: library-frontend-dev
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+    depends_on:
+      - app
+      - server
